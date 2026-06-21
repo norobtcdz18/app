@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0f172a">
+  <title>عارض HTML</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>🌐 عارض HTML</h1>
+      <p class="subtitle">أدخل كود HTML واضغط عرض</p>
+    </header>
+
+    <main class="main">
+      <div class="input-section">
+        <label for="htmlInput">كود HTML</label>
+        <textarea
+          id="htmlInput"
+          placeholder="<!DOCTYPE html>\n<html>\n<body>\n  <h1>مرحباً</h1>\n</body>\n</html>"
+          spellcheck="false"
+        ></textarea>
+      </div>
+
+      <div class="buttons">
+        <button id="viewBtn" class="btn btn-primary">
+          <span>👁️</span> عرض النتيجة
+        </button>
+        <button id="clearBtn" class="btn btn-secondary">
+          <span>🗑️</span> مسح
+        </button>
+      </div>
+
+      <div class="preview-section">
+        <div class="preview-header">
+          <span>النتيجة</span>
+          <button id="fullscreenBtn" class="icon-btn">⛶</button>
+        </div>
+        <iframe id="preview" sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
